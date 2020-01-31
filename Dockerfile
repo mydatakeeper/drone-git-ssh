@@ -18,4 +18,4 @@ CMD trap 'rm -rf ~/.ssh' HUP INT QUIT ABRT KILL ALRM TERM \
     && git init \
     && git remote add origin "$DRONE_GIT_SSH_URL" \
     && git fetch origin "$DRONE_COMMIT_REF" \
-    && git checkout "$DRONE_COMMIT_SHA" -b "$DRONE_COMMIT_BRANCH"
+    && git checkout $DRONE_COMMIT_SHA -b "$DRONE_COMMIT_BRANCH"
